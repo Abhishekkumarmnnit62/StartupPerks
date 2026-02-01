@@ -4,6 +4,7 @@ import cors from "cors";
 import authRoutes from "./routes/authRoutes.js";
 import dealRoutes from "./routes/dealRoutes.js";
 import adminRoutes from "./routes/adminRoutes.js";
+import claimRoutes from "./routes/claimRoutes.js";
 
 
 const app = express();
@@ -14,6 +15,8 @@ app.use(express.json());
 app.use("/api/auth", authRoutes);
 app.use("/api/deals", dealRoutes);
 app.use("/api/admin", adminRoutes);
+app.use("/api/claims", claimRoutes);
+
 
 app.get("/", (req, res) => {
   res.send("API is running...");
